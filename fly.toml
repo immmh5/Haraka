@@ -2,9 +2,16 @@ app = "twq"
 primary_region = "cdg"
 
 [[services]]
-  internal_port = 25 # نغير المنفذ الداخلي ليطابق Haraka
+  internal_port = 25
   protocol = "tcp"
 
   [[services.ports]]
-    handlers = []
-    port = 25 # استقبال بريد SMTP العادي
+    port = 25
+
+[processes]
+  app = ""
+
+[[vm]]
+  cpu_kind = "shared"
+  cpus = 1
+  memory_mb = 256
