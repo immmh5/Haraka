@@ -4,6 +4,9 @@ primary_region = "cdg"
 [[services]]
   internal_port = 25
   protocol = "tcp"
+  auto_start_machines = true
+  auto_stop_machines = false
+  min_machines_running = 1
 
   [[services.ports]]
     port = 25
