@@ -1,12 +1,15 @@
 app = "twq"
 primary_region = "cdg"
 
-[http_service]
+[[services]]
   internal_port = 25
-  force_https = false
+  protocol = "tcp"
   auto_start_machines = true
   auto_stop_machines = false
   min_machines_running = 1
+
+  [[services.ports]]
+    port = 25
 
 [[vm]]
   cpu_kind = "shared"
